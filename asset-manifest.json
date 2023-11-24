@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Tasks-manager/static/css/main.ff13ea77.css",
+    "main.js": "/Tasks-manager/static/js/main.d9275a13.js",
+    "static/media/Ferry-Black.eot": "/Tasks-manager/static/media/Ferry-Black.49a7388dcb2ce51cda59.eot",
+    "static/media/Ferry-Black.ttf": "/Tasks-manager/static/media/Ferry-Black.5360f215b842ff11440a.ttf",
+    "static/media/Ferry-Black.woff": "/Tasks-manager/static/media/Ferry-Black.fc929522c5bc436a4ca3.woff",
+    "index.html": "/Tasks-manager/index.html",
+    "static/media/close-icon.svg": "/Tasks-manager/static/media/close-icon.8139dda020af3e581284e2e4cddd7dcf.svg",
+    "main.ff13ea77.css.map": "/Tasks-manager/static/css/main.ff13ea77.css.map",
+    "main.d9275a13.js.map": "/Tasks-manager/static/js/main.d9275a13.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff13ea77.css",
+    "static/js/main.d9275a13.js"
+  ]
+}
