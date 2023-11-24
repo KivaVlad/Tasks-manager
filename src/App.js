@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Header } from "./components/Header/Header";
+import { Main } from "./components/Main/Main";
+import axios from "axios";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [isLogged, setIsLogged] = useState(false);
+
+    // Проверяем валидность токена
+    useEffect(() => {
+        const getUserData = async () => {
+            const token = localStorage.getItem('token');
+            if (token) {
+                await axios.get('http://localhost:8080/users')
+                .then(() => setIsLogged(true))
+                .catch((error) => {
+                    if (error.response.status === 401) {
+                        setIsLogged(false);
+                    }
+                    console.log(error);
+                })
+            } else {
+                setIsLogged(false);
+            }
+        }
+        getUserData();
+    }, [])
+
+    return (
+        <>
+            <Header isLogged={isLogged} setIsLogged={setIsLogged} />
+            <Main isLogged={isLogged} />
+        </>
+    )
 }
 
-export default App;
+export default App
