@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+## `Приложение «Планировщик задач»`	
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Необходимо разработать веб-приложение, помогающее пользователям управлять своим временем.
 
-## Available Scripts
+__Основные функции:__
 
-In the project directory, you can run:
+1. Создание новых задач, с указанием следующей информации:
+  - название 
+  - описание (опционально)
+  - срок выполнения (дата и время)
 
-### `npm start`
+2. Просмотр существующих задач с возможностью сортировки по дате создания или сроку выполнения.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Управление задачами:
+  - пометка задач как выполненных
+  - изменение задачи
+  - удаление задачи
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Уведомления о задачах, срок выполнения которых приближается (например, в браузере или через e-mail).
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+__Технические требования:__
 
-### `npm run build`
+ - Фронтенд: Pure JavaScript или любой современный фреймворк (React, Vue, Angular и т.д.).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Хранение данных: используйте хранилище браузера (localStorage, sessionStorage и т.д.).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Уведомления: для уведомлений в браузере можно использовать Service Workers или сторонние библиотеки. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+__Дополнительно:__
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Аутентификация: возможность регистрации и авторизации пользователей (JWT). Сымитируйте ответ от сервера: вызывайте какой-нибудь метод а-ля makeAuthRequest, возвращающий токены. Далее проверяйте эти токены при каждом действии.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## `Разработка`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Стек: React.js
 
-## Learn More
+API: JSON Server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+__Основной сценарий работы:__
 
-### Code Splitting
+- Создавать и видеть задачи может только авторизованный пользователь;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Есть возможность авторизации и регистрации с помощью JSON Server Auth. В ответ приходит access_token;
 
-### Analyzing the Bundle Size
+- После успешной авторизации у пользователя есть возможность создавать/редактировать/удалять задачи. Все задачи хранятся на фейковом тестовом сервере. (файл db.json);
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
