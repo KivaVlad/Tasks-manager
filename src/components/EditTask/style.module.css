@@ -1,5 +1,5 @@
 .container {
-    width: 35%;
+    width: 450px;
     padding: 20px 20px 30px 20px;
     border-radius: 10px;
     background-color: var(--white);
@@ -7,7 +7,7 @@
 
 .title {
     font-family: 'Ferry';
-    font-size: 22px;
+    font-size: 20px;
     color: var(--nero);
     text-align: center;
 }
@@ -68,7 +68,14 @@
     padding: 4px 10px;
 }
 
-.button {
+.buttons_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.submit_button, .cancel_button {
     font-size: 16px;
     font-weight: 600;
     width: 100%;
@@ -79,18 +86,10 @@
     transition: .2s ease;
 }
 
-.button:active {
+.cancel_button {
+    background-color: #d4d4d4;
+}
+
+.submit_button:active, .cancel_button:active {
     transform: scale(0.95);
-}
-
-@media screen and (max-width: 1000px) {
-    .container {
-        width: 80%;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .container {
-        width: 100%;
-    }
 }

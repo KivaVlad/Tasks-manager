@@ -1,0 +1,118 @@
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 80px;
+    border-radius: 10px;
+    background-color: #e7e5e1;
+    padding: 10px;
+}
+
+.completed_container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 80px;
+    border-radius: 10px;
+    background-color: rgb(179, 238, 205);
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left_section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 50%;
+}
+
+.checkbox {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.card_text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 80%;
+}
+
+.task_title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 16px;
+    color: var(--nero);
+}
+
+.task_description {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    color: var(--nero);
+}
+
+.right_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.date_container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.date_title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    color: var(--nero);
+}
+
+.icons_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.icons_container > img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .task_title {
+        font-size: 16px;
+    }
+    
+    .task_description {
+        font-size: 14px;
+    }
+
+    
+    .date_title {
+        font-size: 14px;
+    }
+
+    .date {
+        font-size: 14px;
+    }
+
+    .icons_container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 12px;
+    }
+}

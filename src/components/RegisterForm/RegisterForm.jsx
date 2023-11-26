@@ -33,7 +33,6 @@ export const RegisterForm = (props) => {
     function onSubmit() {
         axios.post('http://localhost:8080/register', newUser)
         .then((response) => {
-            console.log(response.data);
             localStorage.setItem('token', response.data.accessToken);
             localStorage.setItem('user', JSON.stringify(response.data.user));
             setUsername('');

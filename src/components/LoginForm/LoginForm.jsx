@@ -29,7 +29,6 @@ export const LoginForm = (props) => {
     function onSubmit() {
         axios.post('http://localhost:8080/login', data)
         .then((response) => {
-            console.log(response.data);
             localStorage.setItem('token', response.data.accessToken);
             localStorage.setItem('user', JSON.stringify(response.data.user));
             setEmail('');
@@ -56,7 +55,7 @@ export const LoginForm = (props) => {
             <form onSubmit={handleSubmit} className={style.form}>
 
                 <div>
-                    <h5 className={style.input_text}>Email</h5>
+                    <h5 className={style.input_text}>Email (test@mail.com)</h5>
                     <div className={!error ? style.input_container : style.input_error_container}>
                         <input 
                             type='text' 
@@ -69,7 +68,7 @@ export const LoginForm = (props) => {
                 </div>
 
                 <div>
-                    <h5 className={style.input_text}>Пароль</h5>
+                    <h5 className={style.input_text}>Пароль (test12345)</h5>
                     <div className={!error ? style.input_container : style.input_error_container}>
                         <input 
                             type='password' 

@@ -1,31 +1,19 @@
 import React, { useState } from "react";
 import style from "./style.module.css";
+import axios from "axios";
 
 
 export const CreateTask = (props) => {
-    const {tasks, setTasks, isLogged} = props;
+    const {getTasks, setTasks, isLogged} = props;
     const [todoTitle, setTodoTitle] = useState('');
     const [todoDescription, setTodoDescription] = useState('');
     const [todoEndDate, setTodoEndDate] = useState('');
 
-    // Создаем новую задачу в виде объекта
-    const addTask = (todoTitle, todoDescription, todoEndDate) => {
-        const newTask = {
-            id: Math.random(),
-            title: todoTitle,
-            description: todoDescription,
-            date_end: new Date(todoEndDate),
-            completed: false,
-        }
-
-        setTasks([...tasks, newTask]);
-        localStorage.setItem('tasks', JSON.stringify([...tasks, newTask]));
-    }
 
     function handleSubmit(e) {
         e.preventDefault();
         if (isLogged) {
-            if (todoTitle?.length) {
+            if (todoTitle.length && todoEndDate.length) {
                 addTask(todoTitle, todoDescription, todoEndDate);
                 setTodoTitle('');
                 setTodoDescription('');
@@ -36,7 +24,31 @@ export const CreateTask = (props) => {
         }
     }
 
-    console.log(tasks);
+    async function onSubmit(newTask) {
+        const response = await axios.post('http://localhost:8080/tasks', newTask)
+        return response;
+    }
+
+    // Создаем новую задачу
+    const addTask = (todoTitle, todoDescription, todoEndDate) => {
+        const newTask = {
+            id: Math.random(),
+            title: todoTitle,
+            description: todoDescription,
+            created_date: new Date(),
+            date_end: new Date(todoEndDate),
+            completed: false,
+        }
+
+        onSubmit(newTask)
+        .then(() => {
+            getTasks()
+            .then((response) => setTasks(response.data))
+            .catch((error) => console.log(error))
+        })
+        .catch((error) => console.log(error))
+    }
+
 
     return (
         <div className={style.container}>
@@ -70,10 +82,10 @@ export const CreateTask = (props) => {
                     </div>
 
                     <div className={style.wrapper}>
-                        <h3 className={style.input_label}>Окончание выполнения</h3>
+                        <h3 className={style.input_label}>Срок выполнения</h3>
                         <div className={style.input_container}>
                             <input 
-                                type="date"
+                                type='datetime-local'
                                 className={style.input}
                                 value={todoEndDate}
                                 onChange={(e) => setTodoEndDate(e.currentTarget.value)}

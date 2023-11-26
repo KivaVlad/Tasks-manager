@@ -7,5 +7,31 @@
       "lastname": "Kiva",
       "id": 1
     }
+  ],
+  "tasks": [
+    {
+      "id": 0.7387488265900501,
+      "title": "Learn JS",
+      "description": "",
+      "created_date": "2023-11-25T21:23:08.315Z",
+      "date_end": "2023-12-08T05:29",
+      "completed": true
+    },
+    {
+      "id": 0.24271404215410897,
+      "title": "Learn React",
+      "description": "React JS",
+      "created_date": "2023-11-25T21:32:34.561Z",
+      "date_end": "2023-12-08T02:38:00.000Z",
+      "completed": false
+    },
+    {
+      "id": 0.3984012730620119,
+      "title": "Дочитать книгу",
+      "description": "Дочитать книгу \"Над пропастью во ржи\"",
+      "created_date": "2023-11-26T09:38:43.841Z",
+      "date_end": "2023-12-22T14:30:00.000Z",
+      "completed": false
+    }
   ]
 }
