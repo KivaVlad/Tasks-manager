@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Tasks-manager/static/css/main.9ba3081d.css",
-    "main.js": "/Tasks-manager/static/js/main.38c25d7f.js",
+    "main.js": "/Tasks-manager/static/js/main.1cbf76c6.js",
     "static/media/Ferry-Black.eot": "/Tasks-manager/static/media/Ferry-Black.49a7388dcb2ce51cda59.eot",
     "static/media/Ferry-Black.ttf": "/Tasks-manager/static/media/Ferry-Black.5360f215b842ff11440a.ttf",
     "static/media/Characters.jpg": "/Tasks-manager/static/media/Characters.fc446e87b8be48e48b8a.jpg",
@@ -11,10 +11,10 @@
     "static/media/edit-icon.svg": "/Tasks-manager/static/media/edit-icon.64e43238a41742d5ab672c4c85e89619.svg",
     "static/media/close-icon.svg": "/Tasks-manager/static/media/close-icon.8139dda020af3e581284e2e4cddd7dcf.svg",
     "main.9ba3081d.css.map": "/Tasks-manager/static/css/main.9ba3081d.css.map",
-    "main.38c25d7f.js.map": "/Tasks-manager/static/js/main.38c25d7f.js.map"
+    "main.1cbf76c6.js.map": "/Tasks-manager/static/js/main.1cbf76c6.js.map"
   },
   "entrypoints": [
     "static/css/main.9ba3081d.css",
-    "static/js/main.38c25d7f.js"
+    "static/js/main.1cbf76c6.js"
   ]
 }
