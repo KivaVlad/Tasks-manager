@@ -64,7 +64,7 @@ export const TasksList = (props) => {
                     </>
                 :
                     <div className={style.text_container}>
-                        <h2 className={style.title}>Чтобы увидеть список задач необходимо авторизоваться</h2>
+                        <h2 className={style.title}>Для просмотра списка задач необходимо авторизоваться</h2>
                         <div className={style.image_container}>
                             <img src={lockImg} alt="" />
                         </div>
